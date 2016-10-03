@@ -1,0 +1,315 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C9403F861DA2A23C00BADDB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9403F851DA2A23C00BADDB6 /* Main.storyboard */; };
+		C9ECCA5B1DA1AE8000F2F4FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ECCA5A1DA1AE8000F2F4FB /* AppDelegate.swift */; };
+		C9ECCA621DA1AE8000F2F4FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9ECCA611DA1AE8000F2F4FB /* Assets.xcassets */; };
+		C9ECCA721DA1AF2300F2F4FB /* Cityscape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ECCA6D1DA1AF2300F2F4FB /* Cityscape.swift */; };
+		C9ECCA731DA1AF2300F2F4FB /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ECCA6E1DA1AF2300F2F4FB /* ConnectViewController.swift */; };
+		C9ECCA741DA1AF2300F2F4FB /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ECCA6F1DA1AF2300F2F4FB /* Container.swift */; };
+		C9ECCA751DA1AF2300F2F4FB /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ECCA701DA1AF2300F2F4FB /* ContainerViewController.swift */; };
+		C9ECCA761DA1AF2300F2F4FB /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ECCA711DA1AF2300F2F4FB /* MenuViewController.swift */; };
+		C9ECCA7F1DA1B05400F2F4FB /* GuillotineMenuTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ECCA7D1DA1B05400F2F4FB /* GuillotineMenuTransitionAnimation.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C9403F851DA2A23C00BADDB6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C9ECCA571DA1AE8000F2F4FB /* Cityscape App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cityscape App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9ECCA5A1DA1AE8000F2F4FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C9ECCA611DA1AE8000F2F4FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C9ECCA661DA1AE8000F2F4FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9ECCA6D1DA1AF2300F2F4FB /* Cityscape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cityscape.swift; sourceTree = "<group>"; };
+		C9ECCA6E1DA1AF2300F2F4FB /* ConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
+		C9ECCA6F1DA1AF2300F2F4FB /* Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		C9ECCA701DA1AF2300F2F4FB /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		C9ECCA711DA1AF2300F2F4FB /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		C9ECCA7D1DA1B05400F2F4FB /* GuillotineMenuTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuillotineMenuTransitionAnimation.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9ECCA541DA1AE8000F2F4FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9ECCA4E1DA1AE8000F2F4FB = {
+			isa = PBXGroup;
+			children = (
+				C9ECCA591DA1AE8000F2F4FB /* Cityscape App */,
+				C9ECCA581DA1AE8000F2F4FB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C9ECCA581DA1AE8000F2F4FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9ECCA571DA1AE8000F2F4FB /* Cityscape App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9ECCA591DA1AE8000F2F4FB /* Cityscape App */ = {
+			isa = PBXGroup;
+			children = (
+				C9ECCA7D1DA1B05400F2F4FB /* GuillotineMenuTransitionAnimation.swift */,
+				C9ECCA6D1DA1AF2300F2F4FB /* Cityscape.swift */,
+				C9ECCA6E1DA1AF2300F2F4FB /* ConnectViewController.swift */,
+				C9ECCA6F1DA1AF2300F2F4FB /* Container.swift */,
+				C9ECCA701DA1AF2300F2F4FB /* ContainerViewController.swift */,
+				C9ECCA711DA1AF2300F2F4FB /* MenuViewController.swift */,
+				C9ECCA5A1DA1AE8000F2F4FB /* AppDelegate.swift */,
+				C9ECCA6C1DA1AECF00F2F4FB /* Storyboard */,
+				C9ECCA611DA1AE8000F2F4FB /* Assets.xcassets */,
+				C9ECCA661DA1AE8000F2F4FB /* Info.plist */,
+			);
+			path = "Cityscape App";
+			sourceTree = "<group>";
+		};
+		C9ECCA6C1DA1AECF00F2F4FB /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C9403F851DA2A23C00BADDB6 /* Main.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9ECCA561DA1AE8000F2F4FB /* Cityscape App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9ECCA691DA1AE8000F2F4FB /* Build configuration list for PBXNativeTarget "Cityscape App" */;
+			buildPhases = (
+				C9ECCA531DA1AE8000F2F4FB /* Sources */,
+				C9ECCA541DA1AE8000F2F4FB /* Frameworks */,
+				C9ECCA551DA1AE8000F2F4FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cityscape App";
+			productName = "Cityscape App";
+			productReference = C9ECCA571DA1AE8000F2F4FB /* Cityscape App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9ECCA4F1DA1AE8000F2F4FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Matthew Wall";
+				TargetAttributes = {
+					C9ECCA561DA1AE8000F2F4FB = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = RZUHU38G5Q;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C9ECCA521DA1AE8000F2F4FB /* Build configuration list for PBXProject "Cityscape App" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C9ECCA4E1DA1AE8000F2F4FB;
+			productRefGroup = C9ECCA581DA1AE8000F2F4FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9ECCA561DA1AE8000F2F4FB /* Cityscape App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9ECCA551DA1AE8000F2F4FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9403F861DA2A23C00BADDB6 /* Main.storyboard in Resources */,
+				C9ECCA621DA1AE8000F2F4FB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9ECCA531DA1AE8000F2F4FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9ECCA731DA1AF2300F2F4FB /* ConnectViewController.swift in Sources */,
+				C9ECCA761DA1AF2300F2F4FB /* MenuViewController.swift in Sources */,
+				C9ECCA741DA1AF2300F2F4FB /* Container.swift in Sources */,
+				C9ECCA751DA1AF2300F2F4FB /* ContainerViewController.swift in Sources */,
+				C9ECCA5B1DA1AE8000F2F4FB /* AppDelegate.swift in Sources */,
+				C9ECCA7F1DA1B05400F2F4FB /* GuillotineMenuTransitionAnimation.swift in Sources */,
+				C9ECCA721DA1AF2300F2F4FB /* Cityscape.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C9ECCA671DA1AE8000F2F4FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C9ECCA681DA1AE8000F2F4FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9ECCA6A1DA1AE8000F2F4FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RZUHU38G5Q;
+				INFOPLIST_FILE = "Cityscape App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cityscape.Cityscape-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C9ECCA6B1DA1AE8000F2F4FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RZUHU38G5Q;
+				INFOPLIST_FILE = "Cityscape App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cityscape.Cityscape-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9ECCA521DA1AE8000F2F4FB /* Build configuration list for PBXProject "Cityscape App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9ECCA671DA1AE8000F2F4FB /* Debug */,
+				C9ECCA681DA1AE8000F2F4FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9ECCA691DA1AE8000F2F4FB /* Build configuration list for PBXNativeTarget "Cityscape App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9ECCA6A1DA1AE8000F2F4FB /* Debug */,
+				C9ECCA6B1DA1AE8000F2F4FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9ECCA4F1DA1AE8000F2F4FB /* Project object */;
+}
