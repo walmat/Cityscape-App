@@ -8,7 +8,7 @@
     
 import UIKit
 
-class ConnectViewController: UIViewController {
+class MainViewController: UIViewController {
     
     let reuseIdentifier = "ContentCell"
     private let cellHeight: CGFloat = 210

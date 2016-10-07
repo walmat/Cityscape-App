@@ -12,6 +12,7 @@ public protocol GuillotineMenu {
 	
     var dismissButton: UIButton? { get }
     var titleLabel: UILabel? { get }
+    var logo: UIImageView? { get }
 }
 
 public protocol GuillotineAnimationDelegate: class {
@@ -69,6 +70,7 @@ open class GuillotineTransitionAnimation: NSObject {
     fileprivate var animator: UIDynamicAnimator!
     fileprivate let myContext: UnsafeMutableRawPointer? = nil
     
+    
     //MARK: - Deinitialization
     deinit {
         displayLink.invalidate()
@@ -87,10 +89,12 @@ open class GuillotineTransitionAnimation: NSObject {
     fileprivate func showHostTitleLabel(_ show: Bool, animated: Bool) {
         guard let guillotineMenu = menu as? GuillotineMenu else { return }
         guard let titleLabel = guillotineMenu.titleLabel else { return }
+        guard let logoView = guillotineMenu.logo else { return }
         
         titleLabel.center = CGPoint(x: supportView!.frame.height / 2, y: supportView!.frame.width / 2)
         titleLabel.transform = CGAffineTransform(rotationAngle: degreesToRadians(90))
         menu.view.addSubview(titleLabel)
+        //menu.view.addSubview(logo)
         
         switch mode {
         case .presentation:
@@ -199,9 +203,13 @@ fileprivate extension GuillotineTransitionAnimation {
             }
         }
         
+        
+        //add logo to screen
+        //menu.view.addSubview(logo)
+        
         let fromVC = context.viewController(forKey: UITransitionContextViewControllerKey.from)
         fromVC?.beginAppearanceTransition(false, animated: true)
-        
+
         animationDelegate?.animatorWillStartPresentation(self)
         
         animateMenu(menu.view, context: context)

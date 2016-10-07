@@ -49,7 +49,7 @@ class ContainerViewController: UIViewController {
         screenEdgeRecognizer.edges = .left
         view.addGestureRecognizer(screenEdgeRecognizer)
         
-        self.addChildView("Cityscape")
+        self.addChildView("Cityscape") //adds 'home' to initial view loaded
         
     }
     
@@ -110,7 +110,6 @@ class ContainerViewController: UIViewController {
     
     func removeChildView(_ vc: UIViewController){
         vc.willMove(toParentViewController: nil)
-        
         vc.view.removeFromSuperview()
         vc.removeFromParentViewController()
     }

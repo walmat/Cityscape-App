@@ -25,12 +25,11 @@ protocol menuViewControllerDelegate: class {
 
 class MenuViewController: UIViewController, GuillotineMenu {
     public var titleLabel: UILabel?
-
+    public var logo: UIImageView?
     public var dismissButton: UIButton?
 
     //GuillotineMenu protocol
-//    var dismissButton: UIButton?
-//    var titleLabel: UILabel?
+
     var titleLabelText: String = "this is a long string"
     weak var delegate: menuViewControllerDelegate?
     
@@ -40,6 +39,9 @@ class MenuViewController: UIViewController, GuillotineMenu {
         dismissButton = UIButton(frame: CGRect.zero)
         dismissButton?.setImage(UIImage(named: "ic_menu"), for: UIControlState())
         dismissButton?.addTarget(self, action: #selector(MenuViewController.dismissButtonTapped(_:)), for: .touchUpInside)
+        
+        logo = UIImageView(image: #imageLiteral(resourceName: "logo"))
+        logo?.image = UIImage(named:"logo")
         
         titleLabel = UILabel()
         titleLabel?.numberOfLines = 1;

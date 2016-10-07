@@ -6,7 +6,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CityscapeViewController: UIViewController {
 
     let reuseIdentifier = "ContentCell"
     fileprivate let cellHeight: CGFloat = 210
@@ -79,8 +79,8 @@ class ViewController: UIViewController {
     
 }
 
-// The following is just for the presentation. You can ignore it
-extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+// The following is just for the presentation that'll be used later. You can ignore it
+extension CityscapeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 6 //how many views we have in our collectionView
@@ -98,7 +98,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     }
 }
 
-extension ViewController: UIViewControllerTransitioningDelegate {
+extension CityscapeViewController: UIViewControllerTransitioningDelegate {
 	
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         presentationAnimator.mode = .presentation
