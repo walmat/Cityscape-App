@@ -9,14 +9,11 @@
 import UIKit
 
 public protocol GuillotineMenu {
-	
     var dismissButton: UIButton? { get }
     var titleLabel: UILabel? { get }
-    var logo: UIImageView? { get }
 }
 
 public protocol GuillotineAnimationDelegate: class {
-	
     func animatorDidFinishPresentation(_ animator: GuillotineTransitionAnimation)
     func animatorDidFinishDismissal(_ animator: GuillotineTransitionAnimation)
     func animatorWillStartPresentation(_ animator: GuillotineTransitionAnimation)
@@ -24,7 +21,6 @@ public protocol GuillotineAnimationDelegate: class {
 }
 
 extension GuillotineAnimationDelegate {
-    
     func animatorDidFinishPresentation(_ animator: GuillotineTransitionAnimation) {}
     func animatorDidFinishDismissal(_ animator: GuillotineTransitionAnimation) {}
     func animatorWillStartPresentation(_ animator: GuillotineTransitionAnimation) {}
@@ -32,7 +28,7 @@ extension GuillotineAnimationDelegate {
 }
 
 open class GuillotineTransitionAnimation: NSObject {
-	
+
     public enum Mode {
         case presentation, dismissal
     }
@@ -85,16 +81,14 @@ open class GuillotineTransitionAnimation: NSObject {
     }
     
     //MARK: - Private methods
-    
     fileprivate func showHostTitleLabel(_ show: Bool, animated: Bool) {
         guard let guillotineMenu = menu as? GuillotineMenu else { return }
         guard let titleLabel = guillotineMenu.titleLabel else { return }
-        guard let logoView = guillotineMenu.logo else { return }
         
         titleLabel.center = CGPoint(x: supportView!.frame.height / 2, y: supportView!.frame.width / 2)
         titleLabel.transform = CGAffineTransform(rotationAngle: degreesToRadians(90))
+        
         menu.view.addSubview(titleLabel)
-        //menu.view.addSubview(logo)
         
         switch mode {
         case .presentation:
@@ -186,6 +180,7 @@ open class GuillotineTransitionAnimation: NSObject {
 fileprivate extension GuillotineTransitionAnimation {
     
     fileprivate func animatePresentation(using context: UIViewControllerContextTransitioning) {
+        
         menu = context.viewController(forKey: UITransitionContextViewControllerKey.to)!
         context.containerView.addSubview(menu.view)
         
@@ -203,9 +198,9 @@ fileprivate extension GuillotineTransitionAnimation {
             }
         }
         
-        
         //add logo to screen
-        //menu.view.addSubview(logo)
+        //menu.view.addSubview(logoView)
+        //context.containerView.addSubview(logoView)
         
         let fromVC = context.viewController(forKey: UITransitionContextViewControllerKey.from)
         fromVC?.beginAppearanceTransition(false, animated: true)

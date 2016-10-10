@@ -25,8 +25,9 @@ protocol menuViewControllerDelegate: class {
 
 class MenuViewController: UIViewController, GuillotineMenu {
     public var titleLabel: UILabel?
-    public var logo: UIImageView?
     public var dismissButton: UIButton?
+    public var logoView: UIImageView?
+    
 
     //GuillotineMenu protocol
 
@@ -40,9 +41,41 @@ class MenuViewController: UIViewController, GuillotineMenu {
         dismissButton?.setImage(UIImage(named: "ic_menu"), for: UIControlState())
         dismissButton?.addTarget(self, action: #selector(MenuViewController.dismissButtonTapped(_:)), for: .touchUpInside)
         
-        logo = UIImageView(image: #imageLiteral(resourceName: "logo"))
-        logo?.image = UIImage(named:"logo")
+        //update logoview constraints to be uniform across all orientations
+        logoView = UIImageView()
+        logoView?.translatesAutoresizingMaskIntoConstraints = false
         
+        logoView?.image = UIImage(named: "logo");
+        logoView?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(MenuViewController.logoTapped(_:))));
+        logoView?.isUserInteractionEnabled = true;
+        
+        self.view.addSubview(logoView!);
+        
+        if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
+            let widthConstraint = NSLayoutConstraint(item: logoView! as UIView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 250)
+            
+            let heightConstraint = NSLayoutConstraint(item: logoView! as UIView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 250)
+            
+            let xConstraint = NSLayoutConstraint(item: logoView! as UIView, attribute: .left, relatedBy: .equal, toItem: self.view, attribute: .left, multiplier: 1, constant: 50)
+            
+            let yConstraint = NSLayoutConstraint(item: logoView! as UIView, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 1, constant: 0)
+            logoView?.contentMode = .scaleAspectFit
+            NSLayoutConstraint.activate([widthConstraint, heightConstraint, xConstraint, yConstraint])
+            
+        }
+        else {
+            let widthConstraint = NSLayoutConstraint(item: logoView! as UIView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 250)
+        
+            let heightConstraint = NSLayoutConstraint(item: logoView! as UIView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 250)
+        
+            let xConstraint = NSLayoutConstraint(item: logoView! as UIView, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1, constant: 0)
+        
+            let yConstraint = NSLayoutConstraint(item: logoView! as UIView, attribute: .top, relatedBy: .equal, toItem: self.view, attribute: .topMargin, multiplier: 1, constant: 40)
+            logoView?.contentMode = .scaleAspectFit
+            NSLayoutConstraint.activate([widthConstraint, heightConstraint, xConstraint, yConstraint])
+        }
+        
+    
         titleLabel = UILabel()
         titleLabel?.numberOfLines = 1;
         titleLabel?.text = titleLabelText
@@ -76,12 +109,20 @@ class MenuViewController: UIViewController, GuillotineMenu {
         self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func logoTapped(_ sender: UIImageView) {
+        if delegate != nil {
+            delegate?.menuViewController(self, willCloseMenuWithType: viewName(rawValue: 0)!)
+        }
+        self.titleLabel?.text = "Cityscape"
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func menuButtonTapped(_ sender: UIButton) {
         if delegate != nil {
             delegate?.menuViewController(self, willCloseMenuWithType: viewName(rawValue: sender.tag)!)
         }
         print("Button Clicked \(sender.tag)")
-        self.titleLabel?.text = "Cityscape"//viewName(rawValue: sender.tag)?.stringName
+        self.titleLabel?.text = "Cityscape"
         self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
